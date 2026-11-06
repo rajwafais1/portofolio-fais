@@ -714,11 +714,236 @@ span {
 
 
 
-@media (max-width: 617px) {
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HEADER DAN NAVBAR */
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        padding: 1rem 5%;
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+
+    /* HOME */
+
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+        padding-top: 12rem;
+        min-height: 100vh;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .home-content h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+        margin-top: 1.5rem;
+    }
+
+    .home-img {
+        width: min(65vw, 280px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .home-img img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+
+    /* ABOUT */
+
+    .about-horizontal {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 5rem 5%;
+        gap: 3rem;
+    }
+
+    .info-horizontal {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 1rem;
+    }
+
+    .info-box {
+        padding: 2rem 1rem;
+    }
+
+    .info-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .info-box:nth-child(1),
+    .info-box:nth-child(2) {
+        border-bottom: 1px solid #dce4ed;
+    }
+
+    .about-text h2 {
+        font-size: 2.8rem;
+    }
+
+    .about-text p {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .experience-container .experience-box {
+        width: 100%;
+        height: auto;
+        min-height: 22rem;
+        padding: 3rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .experience-box h3 {
+        font-size: 2rem;
+    }
+
+    .experience-box p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+
+    /* PORTFOLIO / SKILL */
+
     .portofolio-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
-}
-    
 
+    .portofolio-box {
+        width: 100%;
+    }
+
+    .portofolio-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Layer terlihat tanpa harus hover di HP */
+    .portofolio-box .portofolio-layer {
+        transform: translateY(0);
+        background: linear-gradient(
+            transparent,
+            rgba(0, 238, 255, 0.9)
+        );
+        justify-content: flex-end;
+        padding: 2rem;
+    }
+
+    .portofolio-layer h4 {
+        font-size: 2.5rem;
+    }
+
+    .portofolio-layer p {
+        font-size: 1.3rem;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding-bottom: 5rem;
+    }
+
+    .contact form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact form .input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .contact form textarea {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .contact form .btn {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
    
