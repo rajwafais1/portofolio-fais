@@ -30,10 +30,8 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-.menu-icon, .navbar-toggler {
-    position: relative;
-    z-index: 9999;
-    pointer-events: auto;
+.navbar.active {
+    display: block;
 }
 .home-img {
     width: 350px;
